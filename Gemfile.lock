@@ -1,3 +1,18 @@
+GIT
+  remote: https://github.com/getrailsui/railsui.git
+  revision: 4b3d1a4582b915cc3429eb86a67b3d4c7bbdfad5
+  branch: main
+  specs:
+    railsui (2.0.0)
+      cssbundling-rails
+      devise
+      inline_svg (>= 1.9)
+      jsbundling-rails
+      meta-tags
+      name_of_person
+      psych
+      rails (>= 7.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -69,6 +84,7 @@ GEM
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     base64 (0.2.0)
+    bcrypt (3.1.20)
     bindex (0.8.1)
     bootsnap (1.18.0)
       msgpack (~> 1.2)
@@ -84,15 +100,26 @@ GEM
       xpath (~> 3.2)
     concurrent-ruby (1.2.3)
     crass (1.0.6)
+    cssbundling-rails (1.4.0)
+      railties (>= 6.0.0)
     date (3.3.4)
     debug (1.9.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    devise (4.9.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
+    inline_svg (1.9.0)
+      activesupport (>= 3.0)
+      nokogiri (>= 1.6)
     io-console (0.7.2)
     irb (1.11.1)
       rdoc
@@ -112,10 +139,14 @@ GEM
       net-smtp
     marcel (1.0.2)
     matrix (0.4.2)
+    meta-tags (2.20.0)
+      actionpack (>= 6.0.0, < 7.2)
     method_source (1.0.0)
     mini_mime (1.1.5)
     minitest (5.21.2)
     msgpack (1.7.2)
+    name_of_person (1.1.2)
+      activesupport (>= 5.2.0)
     net-imap (0.4.9.1)
       date
       net-protocol
@@ -128,6 +159,7 @@ GEM
     nio4r (2.7.0)
     nokogiri (1.16.0-x86_64-linux)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     pg (1.5.4)
     psych (5.1.2)
       stringio
@@ -173,6 +205,9 @@ GEM
     regexp_parser (2.9.0)
     reline (0.4.2)
       io-console (~> 0.5)
+    responders (3.1.1)
+      actionpack (>= 5.2)
+      railties (>= 5.2)
     rexml (3.2.6)
     rubyzip (2.3.2)
     selenium-webdriver (4.17.0)
@@ -198,6 +233,8 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -223,6 +260,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.8)
+  railsui!
   redis (~> 4.0)
   selenium-webdriver
   sprockets-rails
